@@ -36,8 +36,8 @@ Constraints:
 
 1 <= word1.length, word2.length <= 100
 word1 and word2 consist of lowercase English letters.
-
-**class Solution:
+```python
+class Solution:
     def mergeAlternately(self, word1: str, word2: str) -> str:
         a = 0
         word = ""
@@ -49,4 +49,5 @@ word1 and word2 consist of lowercase English letters.
         else:
             word = word + word1[len(word2):]
 
-        return word**
+        return word
+```   
