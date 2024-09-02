@@ -21,8 +21,6 @@ Return the result table in any order.
 
 The result format is in the following example.
 
- 
-
 Example 1:
 
 Input: 
@@ -37,14 +35,13 @@ Customer table:
 | 6  | Mark | 2          |
 
 Output: 
-+------+
+
 | name |
-+------+
+|------|
 | Will |
 | Jane |
 | Bill |
 | Zack |
-+------+
 
 ```SQL
 -- Write your PostgreSQL query statement below
