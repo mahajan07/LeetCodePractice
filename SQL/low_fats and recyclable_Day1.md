@@ -14,7 +14,7 @@ This table stores information about products, including their identification, fa
 | `low_fats`   | `ENUM('Y', 'N')`  | Indicates whether the product is low in fat (`Y`) or not (`N`).  |
 | `recyclable` | `ENUM('Y', 'N')`  | Indicates whether the product is recyclable (`Y`) or not (`N`).  |
 
-## Example 1
+## Example
 
 ### Input
 
