@@ -1,34 +1,45 @@
-Table: Products
-Description: This table stores information about products, including their identification, fat content, and recyclability.
+# Products Table Documentation
 
-Columns:
+## Description
 
-Column Name	Data Type	Description
-product_id	INT	Unique identifier for each product.
-low_fats	ENUM('Y', 'N')	Indicates whether the product is low in fat (Y) or not (N).
-recyclable	ENUM('Y', 'N')	Indicates whether the product is recyclable (Y) or not (N).
+This table stores information about products, including their identification, fat content, and recyclability.
 
-Example 1:
+## Table: Products
 
-Input: 
-Products table:
-+-------------+----------+------------+
-| product_id  | low_fats | recyclable |
-+-------------+----------+------------+
-| 0           | Y        | N          |
-| 1           | Y        | Y          |
-| 2           | N        | Y          |
-| 3           | Y        | Y          |
-| 4           | N        | N          |
-+-------------+----------+------------+
-Output: 
-+-------------+
-| product_id  |
-+-------------+
-| 1           |
-| 3           |
-+-------------+
-Explanation: Only products 1 and 3 are both low fat and recyclable.
+### Columns
+
+| Column Name  | Data Type         | Description                                                      |
+|--------------|-------------------|------------------------------------------------------------------|
+| `product_id` | `INT`             | Unique identifier for each product.                              |
+| `low_fats`   | `ENUM('Y', 'N')`  | Indicates whether the product is low in fat (`Y`) or not (`N`).  |
+| `recyclable` | `ENUM('Y', 'N')`  | Indicates whether the product is recyclable (`Y`) or not (`N`).  |
+
+## Example 1
+
+### Input
+
+**Products table:**
+
+| product_id | low_fats | recyclable |
+|------------|----------|------------|
+| 0          | Y        | N          |
+| 1          | Y        | Y          |
+| 2          | N        | Y          |
+| 3          | Y        | Y          |
+| 4          | N        | N          |
+
+### Output
+
+| product_id |
+|------------|
+| 1          |
+| 3          |
+
+### Explanation
+
+Only products with `product_id` 1 and 3 are both low in fat (`Y`) and recyclable (`Y`).
+
+### SQL Query
 
 ``` SQL
 -- Write your PostgreSQL query statement below
