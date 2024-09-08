@@ -8,10 +8,22 @@ ON V.visit_id = T.visit_id
 WHERE T.visit_id IS NULL
 group by V.customer_id
 ```
-### Invalid Tweets - Write a solution to find the IDs of the invalid tweets. The tweet is invalid if the number of characters used in the content of the tweet is strictly greater than 15.
+### Rising Temperature - Write a solution to find all dates' id with higher temperatures compared to its previous dates (yesterday). Return the result table in any order.
 
 ```SQL
-select t.tweet_id
-from Tweets t
-where length(t.content) >=15;
+SELECT w1.id
+FROM Weather W1
+JOIN Weather W2
+ON w1.recordDate = w2.recordDate - INTERVAL '1' DAY
+WHERE w1.temperature < w2.temperature
+```
+
+### Average Time of Process per Machine - There is a factory website that has several machines each running the same number of processes. Write a solution to find the average time each machine takes to complete a process.
+
+```SQL
+SELECT w1.id
+FROM Weather W1
+JOIN Weather W2
+ON w1.recordDate = w2.recordDate - INTERVAL '1' DAY
+WHERE w1.temperature < w2.temperature
 ```
