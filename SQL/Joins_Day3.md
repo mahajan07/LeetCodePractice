@@ -54,5 +54,17 @@ AND Sub.subject_name = Exam.subject_name
 Group by S.student_id, S.student_name, Sub.subject_name
 ```
 
+### Managers with at Least 5 Direct Reports - Write a solution to find managers with at least five direct reports.
 
+```SQL
+SELECT E.name
+FROM Employee E
+WHERE id In (
+    SELECT E.managerId
+    FROM Employee E
+    GROUP BY E.managerId
+    HAVING COUNT(E.managerId) >= 5
+
+)
+```
 
