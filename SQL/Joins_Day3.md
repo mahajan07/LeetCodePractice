@@ -31,3 +31,28 @@ AND A1.activity_type = 'start'
 AND A2.activity_type = 'end'
 group by A1.machine_id
 ```
+
+### Employee Bonus - Write a solution to report the name and bonus amount of each employee with a bonus less than 1000.
+
+```SQL
+SELECT E.name, B.bonus
+FROM Employee E
+LEFT JOIN Bonus B ON E.empId = B.empId
+WHERE B.bonus < 1000 or B.bonus Is Null
+```
+
+
+### Students and Examinations - Write a solution to find the number of times each student attended each exam.
+
+```SQL
+SELECT S.student_id, S.student_name, Sub.subject_name, COUNT(Exam.student_id) As attended_exams
+FROM Students S
+CROSS Join Subjects Sub
+LEFT Join Examinations Exam 
+ON S.student_id = Exam.student_id
+AND Sub.subject_name = Exam.subject_name
+Group by S.student_id, S.student_name, Sub.subject_name
+```
+
+
+
